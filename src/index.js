@@ -14,7 +14,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 1440,
     height: 900,
-    icon: __dirname + "img/icon.png",
+    // icon: __dirname + "img/icon.png",
 
     //решение проблемы ReferenceError: require не определен
     webPreferences: {

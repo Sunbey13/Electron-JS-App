@@ -7,6 +7,7 @@
 через командную строку установить:
 
 npm install electron
+
 npm install electron-forge
 
 далее из директории проекта (cd директория) запустить:

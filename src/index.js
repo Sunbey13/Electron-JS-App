@@ -10,17 +10,27 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 let mainWindow;
 
 const createWindow = () => {
+  //loging
+  const log4js = require("log4js");
+  log4js.configure({
+    appenders: { log: { type: "file", filename: "file-log.log" } },
+    categories: { default: { appenders: ["log"], level: "info" } }
+  });
+  const logger = log4js.getLogger("SYSTEM");
+
   // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 1440,
     height: 900,
     // icon: __dirname + "img/icon.png",
-
+    
     //решение проблемы ReferenceError: require не определен
     webPreferences: {
       nodeIntegration: true
     }
   });
+
+  logger.info("App is opened.");
 
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
@@ -33,6 +43,7 @@ const createWindow = () => {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
+    logger.info("App is closed.");
     mainWindow = null;
   });
 };

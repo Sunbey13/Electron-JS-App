@@ -4,3 +4,4 @@
 .compilerc
 .eslintrc
 package-lock.json
+*.log

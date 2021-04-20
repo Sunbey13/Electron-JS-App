@@ -31,11 +31,11 @@ function pinging(){
 
         exec("chcp 65001 & ping " + inputPing, (error, stdout, stderr) => {
             if(error){
-                console.innerHTML = error.message;
+                console.innerText = error.message;
                 logger.error(error.message);
             }
             if(stderr){
-                console.innerHTML = stderr;
+                console.innerText = stderr;
                 logger.error(stderr);
             }
             if(stdout){

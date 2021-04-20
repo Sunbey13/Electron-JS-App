@@ -32,11 +32,11 @@ function tracert(){
     const { exec } = require("child_process");
     exec("chcp 65001 & tracert -h " + hope + " " + address, (error, stdout, stderr) => {
         if(error){
-            console.innerHTML = error.message;
+            console.innerText = error.message;
             logger.error(error.message);
         }
         if(stderr){
-            console.innerHTML = stderr;
+            console.innerText = stderr;
             logger.error(stderr);
         }
         if(stdout){

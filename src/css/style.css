@@ -124,7 +124,6 @@ input:focus{
 
 .console{
     min-height: 50px;
-    max-width: 1396px;
     border: 1px solid rgba(136, 147, 153, 0.45);
     padding: 15px;
     border-radius: 3px;

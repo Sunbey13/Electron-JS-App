@@ -1,4 +1,4 @@
-# simple-desktop-app-electronjs
+# Kompashka-app
 
 для инициализации проекта из исходников:
 
